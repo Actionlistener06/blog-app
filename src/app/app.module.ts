@@ -1,18 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserListTableComponent } from './components/user-list-table/user-list-table.component';
+import { PostListTableComponent } from './components/post-list-table/post-list-table.component';
+import { CategoryListTableComponent } from './components/category-list-table/category-list-table.component';
+import { CommentListTableComponent } from './components/comment-list-table/comment-list-table.component';
+import { TabComponent } from './components/tab/tab.component';
+import { BaseService } from './services/base.service';
+import { HttpClientModule } from '@angular/common/http';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TableComponent,
+    UserListTableComponent,
+    PostListTableComponent,
+    CategoryListTableComponent,
+    CommentListTableComponent,
+    TabComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [BaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
