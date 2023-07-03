@@ -12,6 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './components/table/table.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { Routes } from '@angular/router';
+import {  MatToolbarModule } from '@angular/material/toolbar';
+import {  MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,14 +26,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostListTableComponent,
     CategoryListTableComponent,
     CommentListTableComponent,
-    TabComponent
+    TabComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatTabsModule,
-    BrowserAnimationsModule
+    MatIconModule,
+    MatToolbarModule,
+    BrowserAnimationsModule,
   ],
   providers: [BaseService],
   bootstrap: [AppComponent]
