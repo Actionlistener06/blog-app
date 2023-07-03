@@ -10,6 +10,8 @@ import { TabComponent } from './components/tab/tab.component';
 import { BaseService } from './services/base.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './components/table/table.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { TableComponent } from './components/table/table.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatTabsModule,
+    BrowserAnimationsModule
   ],
   providers: [BaseService],
   bootstrap: [AppComponent]

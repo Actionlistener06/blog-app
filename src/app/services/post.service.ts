@@ -9,4 +9,7 @@ export class PostService extends BaseService{
   constructor(base : BaseService) {
     super(base.http);
    }
+   getPosts(){
+    return this.getReq('/posts');
+}
 }
