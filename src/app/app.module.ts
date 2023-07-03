@@ -14,9 +14,12 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { Routes } from '@angular/router';
 import {  MatToolbarModule } from '@angular/material/toolbar';
 import {  MatIconModule } from '@angular/material/icon';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,10 @@ import {  MatIconModule } from '@angular/material/icon';
     MatIconModule,
     MatToolbarModule,
     BrowserAnimationsModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatTableModule
   ],
   providers: [BaseService],
   bootstrap: [AppComponent]
