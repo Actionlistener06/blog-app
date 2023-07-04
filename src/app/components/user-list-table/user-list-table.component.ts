@@ -28,6 +28,7 @@ export class UserListTableComponent implements AfterViewInit{
   ngOnInit(): void {
     this.userService.getUsers().subscribe((data: UserModel[]) => {
       this.dataSource.data = data;
+      console.log(data);
     });
   }
 

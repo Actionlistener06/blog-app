@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
@@ -8,10 +8,12 @@ import {MatTabsModule} from '@angular/material/tabs';
   providers: [MatTabsModule]
 })
 export class TabComponent {
+  @Output() tabchange = new EventEmitter<void>();
   active: number = 0;
 
-  onTabChanged(event: any) {
-    console.log(event);
+  
+  onTabChanged(event:any) {
+    this.tabchange.emit();
   }
 
 }
