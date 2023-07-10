@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TabComponent } from './components/tab/tab.component';
 import { UserListTableComponent } from './components/user-list-table/user-list-table.component';
+import { PostListTableComponent } from './components/post-list-table/post-list-table.component';
+import { CategoryListTableComponent } from './components/category-list-table/category-list-table.component';
+import { CommentListTableComponent } from './components/comment-list-table/comment-list-table.component';
 
 const approutes: Routes = [
+  {path:'',redirectTo:'users',pathMatch:'full'},
   {path:'users',component:UserListTableComponent},
+  {path:'posts',component:PostListTableComponent},
+  {path:'categories',component:CategoryListTableComponent},
+  {path:'comments',component:CommentListTableComponent},
+ 
 ];
 
 @NgModule({

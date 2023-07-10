@@ -34,6 +34,7 @@ import { MatInputModule } from '@angular/material/input';
     TabComponent,
     HeaderComponent,
     FooterComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -49,7 +50,7 @@ import { MatInputModule } from '@angular/material/input';
     MatTableModule,
     MatDialogModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
   ],
   providers: [BaseService],
   bootstrap: [AppComponent]

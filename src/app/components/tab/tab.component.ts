@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab',
@@ -10,10 +11,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 export class TabComponent {
   @Output() tabchange = new EventEmitter<void>();
   active: number = 0;
-
+constructor(private router: Router) { }
   
   onTabChanged(event:any) {
-    this.tabchange.emit();
+      this.active = event;
+      this.tabchange.emit(event);
   }
-
 }

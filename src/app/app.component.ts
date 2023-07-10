@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { PostService } from './services/post.service';
-import { PostModel } from './models/post-model';
+import { Component, EventEmitter } from '@angular/core';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +7,10 @@ import { PostModel } from './models/post-model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private postService: PostService) { }
+  constructor() { }
   title = 'myblog';
-  postData: Array<PostModel> = [];
   ngOnInit(): void {
-    this.postService.getPosts().subscribe((data: any) => { this.postData = data; });
   }
+  
 
 }
